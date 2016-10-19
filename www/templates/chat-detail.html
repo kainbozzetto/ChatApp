@@ -1,0 +1,29 @@
+<ion-view view-title="{{username}}">
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item ng-repeat='message in messages' class='normal-white-space'>
+        <span ng-if='message.type=="text"'>{{message.data}}</span>
+        <img ng-if='message.type=="image"' ng-src='data:image/jpeg;base64,{{message.data}}' />
+        <br />
+        <small class='message-details'>{{message._from.username}} - {{message.dateSent | date: 'MMM d, h:mm a'}}</small>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar class='bar-light item-input-inset no-padding'>
+     <form class='item-input-inset full-width'ng-submit='sendMessage()' ng-show='(!otherUser.settings.receiveFriendChatOnly || otherUser.friends[currentUser.$id]) && (!currentUser.settings.receiveFriendChatOnly || currentUser.friends[otherUser.$id])'>
+      <label class='item-input-wrapper'>
+        <input type='text' placeholder='Message' ng-model='message' />
+      </label>
+      <div class='message-button-box'>
+        <button class='button button-small' type='submit'><i class='icon ion-android-send'></i></button>
+        <button class='button button-small' type='button' ng-click='sendPhoto()'><i class='icon ion-camera'></i></button>
+      </div>
+      </form>
+      <div class='center-text full-width' ng-show='otherUser.settings.receiveFriendChatOnly && !otherUser.friends[currentUser.$id]'>
+        <strong>You need to be on {{otherUser.username}}'s friends list</strong>
+      </div>
+      <div class='center-text full-width' ng-show='currentUser.settings.receiveFriendChatOnly && !currentUser.friends[otherUser.$id]'>
+        <strong>{{otherUser.username}} needs to be on your friends list</strong>
+      </div>
+  </ion-footer-bar>
+</ion-view>

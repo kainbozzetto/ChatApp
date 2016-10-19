@@ -1,0 +1,11 @@
+<ion-view view-title="Chats">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="user in users" ng-if='user.$id !== currentUser.$id' type="item-text-wrap" href="#/tab/chats/{{user.username}}">
+        <h2>{{user.username}}</h2>
+        <i class="icon ion-chevron-right icon-accessory" ng-show='(!user.settings.receiveFriendChatOnly && !currentUser.settings.receiveFriendChatOnly) || (user.settings.receiveFriendChatOnly && user.friends[currentUser.$id]) || (currentUser.settings.receiveFriendChatOnly && currentUser.friends[user.$id])'></i>
+        <i class="icon ion-android-cancel icon-accessory" ng-show='(user.settings.receiveFriendChatOnly && !user.friends[currentUser.$id]) || (currentUser.settings.receiveFriendChatOnly && !currentUser.friends[user.$id])'></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

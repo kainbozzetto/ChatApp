@@ -1,0 +1,17 @@
+<ion-view view-title="ChatApp">
+  <ion-content class="padding">
+    <h2>Welcome to ChatApp</h2>
+    <div ng-show='!currentUser'>
+      <p>
+        This is a chat application. Please login if you are an existing user or register if you are a new user.
+      </p>
+      <br />
+      <a class='button button-block button-positive' ui-sref='login'>Login</a>
+      <br />
+      <a class='button button-block button-calm'  ui-sref='register'>Register</a>
+    </div>
+    <div ng-show='currentUser'>
+      <button class='button button-block button-energized' ng-click='logout()'>Logout</button>
+    </div>
+  </ion-content>
+</ion-view>

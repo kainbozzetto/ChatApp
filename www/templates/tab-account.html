@@ -1,0 +1,27 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list ng-show='settings'>
+    <ion-item class='item-divider'>Settings</ion-item>
+      <ion-toggle ng-model="settings.receiveFriendChatOnly">
+        Friend Only Messaging
+      </ion-toggle>
+      <form ng-submit='addFriend()'>
+        <ion-item class='item-divider'>Add Friend</ion-item>
+        <ion-item class='item-input-inset'>
+            <label class='item-input-wrapper'>
+              <input type='text' ng-model='addFriend.username' placeholder='Username' />
+            </label>
+            <button class='button button-small' type='submit'>Add</button>
+        </ion-item>
+      </form>
+      <ion-item class='item-divider'>Friends</ion-item>
+      <ion-item ng-repeat='friend in friends' class='item-icon-right'>
+        <h2>{{friend._user.username}}</h2>
+        <i class='icon ion-close-round assertive clickable' ng-click='removeFriend(friend.$id)'></i>
+      </ion-item>
+    </ion-list>
+    <div class='center-text'>
+    	<ion-spinner icon='bubbles' ng-show='!settings'></ion-spinner>
+    </div>
+  </ion-content>
+</ion-view>

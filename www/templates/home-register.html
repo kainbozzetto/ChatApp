@@ -1,0 +1,23 @@
+<ion-view view-title="Register">
+  <ion-content>
+  <form ng-submit='register()'>
+  	<div class='list'>
+  		<label class='item item-input item-stacked-label'>
+  			<span class='input-label'>Email</span>
+    		<input type='text' ng-model='register.email' placeholder='Email' />
+    	</label>
+      <label class='item item-input item-stacked-label'>
+        <span class='input-label'>Username</span>
+        <input type='text' ng-model='register.username' placeholder='Username' />
+      </label>
+    	<label class='item item-input item-stacked-label'>
+  			<span class='input-label'>Password</span>
+    		<input type='password' ng-model='register.password' placeholder='Password' />
+    	</label>
+    </div>
+    <div class='padding'>
+    	<button class='button button-block button-positive' type='submit'>Register</button>
+    </div>
+	</form>
+  </ion-content>
+</ion-view>

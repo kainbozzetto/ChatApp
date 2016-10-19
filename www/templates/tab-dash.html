@@ -1,0 +1,19 @@
+<ion-view view-title="Home">
+  <ion-content class="padding">
+    <h2>Welcome to ChatApp</h2>
+    <p>
+      <div class='card padding center-text' ng-show='connected'>
+        Currently connected to Chat server
+      </div>
+      <div class='card padding center-text' ng-show='!connected'>
+        Currently disconnected from Chat server
+      </div>
+      <br />
+      Please use the tabs down the bottom to navigate your way through the app.
+      <br /><br />
+      To send a message to someone, firstly add them to your friends list in the Account tab and then go to the Chats tab to find them.
+    </p>
+    <br />
+    <button class='button button-block button-energized' ng-click='logout()'>Logout</button>
+  </ion-content>
+</ion-view>
