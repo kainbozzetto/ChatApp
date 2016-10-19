@@ -32,7 +32,7 @@ Provides the status of the server in case there is no connection. Also provides 
 
 ## Account
 
-Allows users to change settings and add friends. Friend only messaging is where you can only receive and send messages to people on your friends list.
+Allows users to change settings and add/remove friends. Friend only messaging is where you can only receive and send messages to people on your friends list.
 
 <img src="https://cloud.githubusercontent.com/assets/8401521/19503186/984b3070-95fd-11e6-8360-453178d327dc.png" alt="Home" width="270px" />
 
