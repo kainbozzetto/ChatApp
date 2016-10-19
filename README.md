@@ -4,7 +4,7 @@ Hybrid mobile application developed using Ionic framework (Cordova, AngularJS) a
 
 ## Home
 
-![](https://cloud.githubusercontent.com/assets/8401521/19503148/6fa70df6-95fd-11e6-885a-cc7a2df8af83.png)
+![](https://cloud.githubusercontent.com/assets/8401521/19503148/6fa70df6-95fd-11e6-885a-cc7a2df8af83.png =360x640)
 
 ## Register
 
